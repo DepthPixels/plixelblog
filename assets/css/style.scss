@@ -1,0 +1,21 @@
+---
+---
+
+@import "{{ site.theme }}";
+::-webkit-scrollbar {
+	display: none;
+}
+/* Color Codes */
+:root {
+  --custom-black: #272838;
+  --custom-grey: #373848;
+  --custom-brown: #934958;
+  --custom-red: #ff6978;
+  --custom-orange: #fea671;
+  --custom-white: #ffffff;
+  --custom-lightblue: #99bad5;
+  --custom-blue: #3f84e5;
+}
+body {
+  background-color: var(--custom-block);
+}
