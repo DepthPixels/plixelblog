@@ -1,0 +1,220 @@
+---
+---
+
+@import "{{ site.theme }}";
+::-webkit-scrollbar {
+	display: none;
+}
+/* Color Codes */
+:root {
+  --custom-black: #272838;
+  --custom-grey: #373848;
+  --custom-brown: #934958;
+  --custom-red: #ff6978;
+  --custom-orange: #fea671;
+  --custom-white: #ffffff;
+  --custom-lightblue: #99bad5;
+  --custom-blue: #3f84e5;
+}
+/* General Styling */
+body {
+  font-family: "Product Sans";
+  background-size: cover;
+  background-attachment: fixed;
+}
+/* Navbar Styling */
+.navbar {
+  background-color: var(--custom-black);
+  margin: 20px;
+  height: 70px;
+  padding: 1px 20px;
+  border-radius: 10px;
+  color: var(--custom-lightblue);
+  position: fixed;
+  top: 0;
+}
+.navbarLeft {
+  float: left;
+  color: var(--custom-lightblue);
+}
+.navbarRight {
+  padding: 20px;
+  float: right;
+}
+.navbarRight table tr td a {
+  color: var(--custom-black);
+  text-decoration: none;
+  background-color: var(--custom-lightblue);
+  padding: 5px;
+  border-radius: 5px;
+}
+.navbarRight table tr td {
+  padding: 5px;
+}
+.content {
+  padding-top: 100px;
+}
+/* Content Styling - Cards */
+.cardContainer {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  grid-auto-rows: 350px;
+}
+.largeCard {
+  background-color: var(--custom-red);
+  margin: 20px;
+  animation-duration: 0.5s;
+  animation-name: cardslidein;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.largeCard a {
+  text-decoration: none;
+  color: inherit;
+}
+.card a {
+  text-decoration: none;
+  color: inherit;
+}
+.largeCard:hover, .card:hover {
+  animation-duration: 0.5s;
+  animation-name: cardslideout;
+  box-shadow: 15px 15px 1px -2px var(--custom-black);
+}
+.largeCard img {
+  width: 100%;
+  height: 85%;
+}
+.card {
+  background-color: var(--custom-red);
+  margin: 20px;
+  animation-duration: 0.5s;
+  animation-name: cardslidein;
+}
+.card img {
+  width: 100%;
+  height: 70%;
+}
+.textContainer {
+  font-size: 14px;
+  padding: 1px 15px;
+}
+
+
+/* Content Styling - Main Content*/
+.paragraph {
+  background-color: var(--custom-black);
+  border-radius: 10px;
+  margin: 5%;
+  padding: 2%;
+}
+blockquote {
+  border-left: 5px solid var(--custom-blue);
+  padding: 3px 10px;
+  border-radius: 3px;
+  background-color: var(--custom-grey);
+  font-family: "JetBrains Mono";
+}
+.buttons {
+  background-color: var(--custom-black);
+  border-radius: 10px;
+  margin: 5%;
+  padding: 2%;
+}
+.buttons table tr td a {
+  font-size: 15px;
+  color: var(--custom-black);
+  text-decoration: none;
+  background-color: var(--custom-lightblue);
+  padding: 10px;
+  border-radius: 5px;
+}
+#Space {
+  width: 1150px;
+}
+
+
+/* Content Styling - Code Snippets */
+.code {
+  padding : 3px 5px 3px 45px;
+  list-style-type : decimal-leading-zero;
+  font-family : "JetBrains Mono";
+  background-color: var(--custom-grey);
+  font-size: 14px;
+  border-radius: 5px;
+}
+.code li {
+margin: 2px;
+padding: 5px;
+background-color: var(--custom-black);
+}
+.code li.t1 {
+padding-left : 4ex;
+}
+.code li.t2 {
+padding-left : 8ex;
+}
+.code li.t3 {
+padding-left : 12ex;
+}
+.code li.t4 {
+padding-left : 16ex;
+}
+.code li.t5 {
+padding-left : 20ex;
+}
+.code li.t6 {
+padding-left : 24ex;
+}
+.code li.t7 {
+padding-left : 28ex;
+}
+.code li.t8 {
+padding-left : 32ex;
+}
+code {
+  font-size: 12px;
+  background-color: var(--custom-grey);
+  border-radius: 5px;
+  padding: 5px;
+  color: var(--custom-white);
+  font-family: "JetBrains Mono";
+}
+code a:link {
+  color: var(--custom-white);
+  font-family: "Product Sans";
+  font-size: medium;
+}
+code a:visited {
+  color: var(--custom-white);
+  font-family: "Product Sans";
+  font-size: medium;
+}
+code a:hover {
+  color: var(--custom-blue);
+  font-family: "Product Sans";
+  font-size: medium;
+}
+
+/* Animation Keyframes */
+@keyframes cardslideout {
+  from {
+    box-shadow: 0px 0px 1px -2px var(--custom-black);
+  }
+
+  to {
+    box-shadow: 15px 15px 1px -2px var(--custom-black);
+  }
+}
+@keyframes cardslidein {
+  from {
+    box-shadow: 15px 15px 1px -2px var(--custom-black);
+  }
+
+  to {
+    box-shadow: 0px 0px 1px -2px var(--custom-black);
+  }
+}
